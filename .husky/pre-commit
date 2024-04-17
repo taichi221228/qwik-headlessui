@@ -1,0 +1,3 @@
+pnpm run build.types
+pnpm run lint
+pnpm run fmt
