@@ -39,7 +39,18 @@
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"recommended": true
+			"recommended": true,
+			"complexity": { "noBannedTypes": "off" },
+			"correctness": {
+				"noSwitchDeclarations": "off",
+				"noUnusedVariables": "error"
+			},
+			"style": {
+				"noInferrableTypes": "off",
+				"noNamespace": "off",
+				"noNonNullAssertion": "off"
+			},
+			"suspicious": { "noEmptyBlockStatements": "off", "noExplicitAny": "off" }
 		}
 	}
 }
