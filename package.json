@@ -37,6 +37,7 @@
     "prepare": "husky"
   },
   "devDependencies": {
+    "@biomejs/biome": "^1.7.0",
     "@builder.io/qwik": "1.5.2",
     "@commitlint/cli": "^19.2.2",
     "@commitlint/config-conventional": "^19.2.2",
