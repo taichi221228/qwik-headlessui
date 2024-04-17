@@ -1,0 +1,45 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.6.1/schema.json",
+	"organizeImports": {
+		"enabled": false
+	},
+	"files": {
+		"ignore": [
+			"./dist",
+			"./lib",
+			"./lib-types",
+			"./server",
+			"node_modules",
+			"*.local",
+			".cache",
+			".mf",
+			".rollup.cache",
+			"tsconfig.tsbuildinfo",
+			"logs",
+			"*.log",
+			"npm-debug.log*",
+			"yarn-debug.log*",
+			"yarn-error.log*",
+			"pnpm-debug.log*",
+			"lerna-debug.log*",
+			".vscode/*",
+			"!.vscode/launch.json",
+			"!.vscode/*.code-snippets",
+			".idea",
+			".DS_Store",
+			"*.suo",
+			"*.ntvs*",
+			"*.njsproj",
+			"*.sln",
+			"*.sw?",
+			".yarn/*",
+			"!.yarn/releases"
+		]
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true
+		}
+	}
+}
