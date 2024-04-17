@@ -6,7 +6,7 @@ module.exports = {
 		es2021: true,
 		node: true,
 	},
-	extends: ["plugin:qwik/recommended"],
+	extends: ["plugin:qwik/recommended", "./.eslintrc.import.cjs"],
 	parser: "@typescript-eslint/parser",
 	parserOptions: {
 		tsconfigRootDir: __dirname,
