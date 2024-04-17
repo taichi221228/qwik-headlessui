@@ -48,6 +48,8 @@
 		"@typescript-eslint/parser": "^7.3.1",
 		"concurrently": "^8.2.2",
 		"eslint": "^8.57.0",
+		"eslint-import-resolver-typescript": "^3.6.1",
+		"eslint-plugin-import": "^2.29.1",
 		"eslint-plugin-qwik": "latest",
 		"husky": "^9.0.11",
 		"np": "^8.0.4",
