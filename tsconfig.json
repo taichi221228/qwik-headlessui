@@ -17,6 +17,6 @@
 		"isolatedModules": true,
 		"types": ["vite/client"]
 	},
-	"files": ["./vite.config.ts"],
+	"files": ["./postcss.config.cjs", "./tailwind.config.js", "./vite.config.ts"],
 	"include": ["src"]
 }
