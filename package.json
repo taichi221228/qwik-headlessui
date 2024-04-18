@@ -31,8 +31,8 @@
 		"release": "np",
 		"start": "vite --open --mode ssr",
 		"test": "echo \"No test specified\" && exit 0",
-		"qwik": "qwik",
-		"prepare": "husky"
+		"prepare": "husky",
+		"qwik": "qwik"
 	},
 	"devDependencies": {
 		"@biomejs/biome": "^1.7.0",
