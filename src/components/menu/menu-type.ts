@@ -1,9 +1,9 @@
-enum MenuStates {
+export enum MenuStates {
 	Open = 0,
 	Closed = 1,
 }
 
-enum ActivationTrigger {
+export enum ActivationTrigger {
 	Pointer = 0,
 	Other = 1,
 }
@@ -24,4 +24,9 @@ export type StateDefinition = {
 	searchQuery: string;
 	activeItemIndex: number | null;
 	activationTrigger: ActivationTrigger;
+};
+
+// TODO: Need to implement the `Props`
+export type MenuProps = {
+	__demoMode?: boolean;
 };
