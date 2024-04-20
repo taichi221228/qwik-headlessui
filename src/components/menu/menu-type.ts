@@ -1,32 +1,25 @@
-export enum MenuStates {
-	Open = 0,
-	Closed = 1,
-}
+export type ActivationTrigger = "pointer" | "other";
 
-export enum ActivationTrigger {
-	Pointer = 0,
-	Other = 1,
-}
+export type MenuState = {
+	__isDemo: boolean;
 
-// TODO: Need PoC about ref
-type MenuItemDataRef = {
-	textValue?: string;
-	disabled: boolean;
-	domRef: HTMLElement | null;
-};
-
-export type StateDefinition = {
-	__demoMode: boolean;
-	menuState: MenuStates;
+	isOpen: boolean;
 	buttonRef: HTMLButtonElement | null; // TODO: Need PoC about ref
-	itemsRef: HTMLDivElement | null; // TODO: Need PoC about ref
-	items: { id: string; dataRef: MenuItemDataRef }[];
+	itemsData: {
+		contents: Array<{
+			id: string;
+			ref: {
+				isDisable: boolean;
+				textValue?: string;
+				ref: HTMLElement | null; // TODO: Need PoC about ref
+			};
+		}>;
+		activeIndex: number | null;
+		ref: HTMLDivElement | null; // TODO: Need PoC about ref
+	};
 	searchQuery: string;
-	activeItemIndex: number | null;
 	activationTrigger: ActivationTrigger;
 };
 
 // TODO: Need to implement the `Props`
-export type MenuProps = {
-	__demoMode?: boolean;
-};
+export type MenuProps = Partial<Pick<MenuState, "__isDemo">>;

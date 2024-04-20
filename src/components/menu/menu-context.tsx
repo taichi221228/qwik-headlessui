@@ -6,28 +6,24 @@ import {
 	useContextProvider,
 } from "@builder.io/qwik";
 
-import {
-	ActivationTrigger,
-	type MenuProps,
-	MenuStates,
-	type StateDefinition,
-} from "./menu-type";
+import type { MenuProps, MenuState } from "./menu-type";
 
-const MenuContext = createContextId<StateDefinition>("qwik-headlessui.menu");
+const MenuContext = createContextId<MenuState>("qwik-headlessui.menu");
 
-const _MenuContextProvider = component$<MenuProps>(({ __demoMode = false }) => {
-	const reducerBag = {
-		__demoMode,
-		menuState: __demoMode ? MenuStates.Open : MenuStates.Closed,
+const _MenuContextProvider = component$<MenuProps>(({ __isDemo = false }) => {
+	useContextProvider(MenuContext, {
+		__isDemo,
+
+		isOpen: __isDemo,
 		buttonRef: null,
-		itemsRef: null,
-		items: [],
+		itemsData: {
+			contents: [],
+			activeIndex: null,
+			ref: null,
+		},
 		searchQuery: "",
-		activeItemIndex: null,
-		activationTrigger: ActivationTrigger.Other,
-	} satisfies StateDefinition;
-
-	useContextProvider(MenuContext, reducerBag);
+		activationTrigger: "other",
+	});
 
 	return <Slot />;
 });
