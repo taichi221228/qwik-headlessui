@@ -2,6 +2,7 @@ import {
 	component$,
 	createContextId,
 	Slot,
+	useContext,
 	useContextProvider,
 } from "@builder.io/qwik";
 
@@ -30,3 +31,16 @@ const _MenuContextProvider = component$<MenuProps>(({ __demoMode = false }) => {
 
 	return <Slot />;
 });
+
+// TODO: Need to know the usage
+const _useMenuContext = (component: string) => {
+	const context = useContext(MenuContext); // eslint-disable-line qwik/use-method-usage
+	if (context === null) {
+		const err = new Error(
+			`<${component} /> is missing a parent <Menu /> component.`,
+		);
+		if (Error.captureStackTrace) Error.captureStackTrace(err, _useMenuContext);
+		throw err;
+	}
+	return context;
+};
