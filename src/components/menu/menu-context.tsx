@@ -17,7 +17,7 @@ const _MenuContextProvider = component$<MenuProps>(({ __isDemo = false }) => {
 		isOpen: __isDemo,
 		buttonRef: null,
 		itemsData: {
-			contents: [],
+			items: [],
 			activeIndex: null,
 			ref: null,
 		},

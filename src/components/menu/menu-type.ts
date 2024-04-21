@@ -6,7 +6,7 @@ export type MenuStore = {
 	isOpen: boolean;
 	buttonRef: HTMLButtonElement | null; // TODO: Need PoC about ref
 	itemsData: {
-		contents: Array<{
+		items: Array<{
 			id: string;
 			ref: {
 				isDisable: boolean;
