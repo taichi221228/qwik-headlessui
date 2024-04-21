@@ -15,7 +15,10 @@
 		"skipLibCheck": true,
 		"incremental": true,
 		"isolatedModules": true,
-		"types": ["vite/client"]
+		"types": ["vite/client"],
+		"paths": {
+			"~/*": ["./src/*"]
+		}
 	},
 	"files": ["./postcss.config.cjs", "./tailwind.config.js", "./vite.config.ts"],
 	"include": ["src"]
