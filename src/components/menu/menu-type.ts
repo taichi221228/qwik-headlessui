@@ -23,3 +23,8 @@ export type MenuStore = {
 
 // TODO: Need to implement the `Props`
 export type MenuProps = Partial<Pick<MenuStore, "__isDemo">>;
+
+export type MenuActions = {
+	openMenu: () => void;
+	closeMenu: () => void;
+};
