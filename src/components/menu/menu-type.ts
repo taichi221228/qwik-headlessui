@@ -1,6 +1,6 @@
 export type ActivationTrigger = "pointer" | "other";
 
-export type MenuState = {
+export type MenuStore = {
 	__isDemo: boolean;
 
 	isOpen: boolean;
@@ -22,4 +22,4 @@ export type MenuState = {
 };
 
 // TODO: Need to implement the `Props`
-export type MenuProps = Partial<Pick<MenuState, "__isDemo">>;
+export type MenuProps = Partial<Pick<MenuStore, "__isDemo">>;

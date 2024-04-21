@@ -6,9 +6,9 @@ import {
 	useContextProvider,
 } from "@builder.io/qwik";
 
-import type { MenuProps, MenuState } from "./menu-type";
+import type { MenuProps, MenuStore } from "./menu-type";
 
-const MenuContext = createContextId<MenuState>("qwik-headlessui.menu");
+const MenuContext = createContextId<MenuStore>("qwik-headlessui.menu");
 
 const _MenuContextProvider = component$<MenuProps>(({ __isDemo = false }) => {
 	useContextProvider(MenuContext, {
